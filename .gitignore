@@ -1,0 +1,53 @@
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# =========================
+# Environment / Secrets
+# =========================
+
+.env
+.env.*
+
+# =========================
+# VS Code
+# =========================
+
+.vscode/
+
+# =========================
+# Financial Data
+# =========================
+
+# Bloomberg / Screener exports
+data/financial/
+
+# =========================
+# Documents
+# =========================
+
+data/documents/
+
+# =========================
+# Testing / Coverage
+# =========================
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================
+# OS files
+# =========================
+
+.DS_Store
+Thumbs.db
