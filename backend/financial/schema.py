@@ -57,6 +57,7 @@ CANONICAL_METRICS = {
     "accounts_receivable",
     "inventory",
     "accounts_payable",
+    "working_capital",
     "total_current_assets",
     "total_current_liabilities",
     "total_assets",
@@ -68,7 +69,14 @@ CANONICAL_METRICS = {
     "operating_cash_flow",
     "investing_cash_flow",
     "financing_cash_flow",
+    "net_cash_flow",
     "capital_expenditure",
+
+    # Ratios / market data
+    "eps",
+    "price_to_earnings",
+    "share_price",
+    "operating_profit_margin",
 
     # Other
     "related_party_transactions",

@@ -1,5 +1,4 @@
 from pathlib import Path
-from pprint import pprint
 
 from backend.financial.sources.bloomberg import BloombergParser
 
@@ -16,6 +15,7 @@ FILE_PATH = (
 
 
 def main():
+
     print("Starting Bloomberg inspection...")
     print(f"Looking for file: {FILE_PATH}")
 
@@ -28,7 +28,7 @@ def main():
 
     result = parser.inspect()
 
-    for sheet, information in result.items():
+    for sheet, information in result["sheet_details"].items():
 
         print(f"\n--- {sheet} ---")
 
@@ -36,12 +36,15 @@ def main():
         print("Columns:", information["columns"])
 
         print("\nMetadata:")
-        pprint(information["metadata"])
+        print(information["metadata"])
 
-        print("\nFields found:")
+        print("\nRows:")
 
-        for field in information["fields"][:30]:
-            print(field)
+        for index, row in enumerate(
+            information["rows_text"],
+            start=1,
+        ):
+            print(f"{index}: {row}")
 
 
 if __name__ == "__main__":
